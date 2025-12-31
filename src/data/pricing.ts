@@ -1,4 +1,4 @@
-import { Layers, Store, WalletCards, UserIcon, Plane, Cigarette, Globe } from "lucide-react";
+import { Layers, Store, WalletCards, Plane, Cigarette, Globe } from "lucide-react";
 
 export const pricing = [
     {
