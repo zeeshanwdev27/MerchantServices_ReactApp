@@ -1,13 +1,9 @@
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/footer";
 import LenisScroll from "./components/lenis";
 import Navbar from "./components/navbar";
-import FaqSection from "./sections/faq-section";
-import FeaturesSection from "./sections/features-section";
-import HeroSection from "./sections/hero-section";
-import PricingSection from "./sections/pricing-section";
-import StatsSection from "./sections/stats-section";
-import MerchantIntegration from "./sections/merchant-integration";
-import StartProcessing from "./sections/start-processing";
+import Home from './pages/Home/Home'
+import MerchantServices_Main from './pages/Solutions/MerchantServices/MerchantServices_Main'
 
 export default function App() {
     return (
@@ -15,14 +11,10 @@ export default function App() {
             <LenisScroll />
             <Navbar />
 
-            <HeroSection />
-            
-            <FeaturesSection />
-            <PricingSection />
-            <FaqSection />
-            <MerchantIntegration />
-            <StatsSection />
-            <StartProcessing />
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/merchant-services" element={<MerchantServices_Main/>}/>
+            </Routes>
             <Footer />
         </div>
     )

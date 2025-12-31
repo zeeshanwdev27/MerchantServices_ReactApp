@@ -18,6 +18,7 @@ export interface ISectionTitle {
     dir?: 'left' | 'center';
 };
 
+
 export interface IFeature {
     icon: LucideIcon;
     title: string;

@@ -4,6 +4,7 @@ import type { ILink } from "../../types";
 import { MenuIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 import AnimatedContent from "./animated-content";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,27 +24,27 @@ export default function Navbar() {
 <div className="hidden lg:flex gap-3 relative z-999">
     {links.map((link: ILink) => (
         <div key={link.name} className="relative group">
-            <a
-                href={link.href}
+            <Link
+                to={link.href}
                 className="py-1 px-3 hover:text-orange-500 flex items-center"
             >
                 {link.name}
-            </a>
+            </Link>
 
             {/* Submenu */}
             {link.subLinks && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 p-2 min-w-[200px] mt-3 z-[999]">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 hidden group-hover:block bg-white border border-neutral-200 rounded-xl shadow-lg shadow-black/5 p-2 min-w-50 mt-3 z-999">
                     {/* Invisible bridge to prevent hover gap */}
                     <div className="absolute -top-3 left-0 right-0 h-3"></div>
                     <div className="flex flex-col gap-1">
                         {link.subLinks.map(sub => (
-                            <a
+                            <Link
                                 key={sub.name}
-                                href={sub.href}
+                                to={sub.href}
                                 className="px-4 py-3 rounded-lg hover:bg-orange-50 text-neutral-700 hover:text-neutral-900 transition-colors duration-200"
                             >
                                 <div className="font-medium">{sub.name}</div>
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -69,7 +70,7 @@ export default function Navbar() {
 <div className={`fixed top-0 right-0 z-60 w-full h-screen bg-white shadow-xl shadow-black/5 transition-all duration-300 ease-in-out ${isMenuOpen ? "translate-y-0" : "-translate-y-full"}`}>
     <div className="h-full flex flex-col">
         {/* Header - Fixed at top */}
-        <div className="flex items-center justify-between p-4 border-b border-neutral-200 flex-shrink-0">
+        <div className="flex items-center justify-between p-4 border-b border-neutral-200 shrink-0">
             <img src="/assets/logo.svg" alt="Buildify Logo" width={135} height={36} />
             <XIcon className="size-6.5 cursor-pointer" onClick={() => setIsMenuOpen(false)} />
         </div>
@@ -79,8 +80,8 @@ export default function Navbar() {
             <div className="flex flex-col gap-4 p-4 text-base">
                 {links.map((link: ILink) => (
                     <div key={link.name}>
-                        <a
-                            href={link.href}
+                        <Link
+                            to={link.href}
                             className="py-3 px-3 flex justify-between items-center hover:bg-neutral-50 rounded-lg transition-colors"
                             onClick={(e) => {
                                 if (link.subLinks) {
@@ -97,21 +98,21 @@ export default function Navbar() {
                                     ▼
                                 </span>
                             )}
-                        </a>
+                        </Link>
 
                         {/* Mobile Submenu */}
                         {link.subLinks && openSubMenu === link.name && (
                             <div className="ml-4 mt-2 pl-3 border-l-2 border-neutral-200">
                                 <div className="flex flex-col gap-2 py-2">
                                     {link.subLinks.map(sub => (
-                                        <a
+                                        <Link
                                             key={sub.name}
-                                            href={sub.href}
+                                            to={sub.href}
                                             className="py-3 px-4 rounded-lg hover:bg-neutral-50 text-neutral-600 hover:text-neutral-900 transition-colors duration-200"
                                             onClick={() => setIsMenuOpen(false)}
                                         >
                                             <div className="font-medium">{sub.name}</div>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
@@ -122,10 +123,10 @@ export default function Navbar() {
         </div>
 
         {/* Fixed Button at Bottom */}
-        <div className="p-4 border-t border-neutral-200 flex-shrink-0 bg-white">
+        <div className="p-4 border-t border-neutral-200 shrink-0 bg-white">
             <a 
                 href="https://prebuiltui.com?ref=buildify" 
-                className="w-full py-4 px-6 text-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] bg-gradient-to-tl from-orange-600 to-orange-500 text-white rounded-full font-medium hover:opacity-90 transition-opacity block"
+                className="w-full py-4 px-6 text-center shadow-[inset_0_2px_4px_rgba(255,255,255,0.6)] bg-linear-to-tl from-orange-600 to-orange-500 text-white rounded-full font-medium hover:opacity-90 transition-opacity block"
                 onClick={() => setIsMenuOpen(false)}
             >
                 Get Started
