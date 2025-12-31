@@ -3,7 +3,8 @@ import type { LucideIcon } from "lucide-react";
 export interface ILink {
     name: string;
     href: string;
-};
+    subLinks?: ILink[];
+}
 
 export interface ICustomIcon {
     icon: LucideIcon;

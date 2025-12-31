@@ -7,7 +7,7 @@ export default function HeroSection() {
     return (
         <section className="bg-[url('/assets/hero-gradient-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-16 lg:px-24 xl:px-32 min-h-screen flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
 
-            <div className="w-full max-w-2xl mt-35 sm:mt-0 flex flex-col items-center justify-center ">
+            <div className="w-full max-w-2xl mt-35 lg:mt-0 flex flex-col items-center justify-center ">
                 <AnimatedContent reverse distance={30} className="flex items-center gap-2 bg-white/50 backdrop-blur p-1 rounded-full">
                     <div className="flex items-center -space-x-3">
                         <img className="size-7 rounded-full border-2 border-white"
@@ -28,7 +28,7 @@ export default function HeroSection() {
                 </AnimatedContent>
                 <AnimatedContent distance={30} delay={0.1} className="relative">
                     <h1 className="text-center font-urbanist text-5xl/15 md:text-6xl/18 mt-4 font-bold max-w-2xl">
-                        They Decline, We Approve.
+                        They Denied, We Approved
                     </h1>
                     <div className="absolute -top-5 right-13 hidden md:block">
                         <CustomIcon icon={SparkleIcon} dir="right" />
@@ -62,7 +62,7 @@ export default function HeroSection() {
 
 
             <AnimatedContent  distance={30} delay={0.1} className="relative w-full sm:w-auto">
-                <form action="" className="px-4 sm:px-6 py-8 flex flex-col gap-3 w-full md:max-w-lg rounded-2xl bg-white border-2 border-orange-400">
+                <form action="" className="mb-10 lg:mb-0 px-4 sm:px-6 py-8 flex flex-col gap-3 w-full md:max-w-lg rounded-2xl bg-white border-2 border-orange-400">
                     <h1 className="text-center font-bold text-2xl text-gray-800">Get Started Today!</h1>
                     <input type="text" placeholder="Business Name" className="border border-orange-300 p-2 px-2 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-orange-400" />
                     <div className="flex flex-col sm:flex-row gap-5 w-full">

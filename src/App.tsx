@@ -16,6 +16,7 @@ export default function App() {
             <Navbar />
 
             <HeroSection />
+            
             <FeaturesSection />
             <PricingSection />
             <FaqSection />
