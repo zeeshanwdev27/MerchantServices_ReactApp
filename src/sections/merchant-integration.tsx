@@ -11,7 +11,7 @@ export default function MerchantIntegration() {
             <div className="p-4 pt-20 flex flex-col items-center max-w-7xl mx-auto justify-center border-x border-gray-200">
                 <SectionTitle
                     icon={Blocks  }
-                    title="Crazy Merchants Integrations"
+                    title="Merchant Services Integrations"
                     subtitle="Effortlessly integrate with a range of platforms to enhance your business operations. Connect with leading payment gateways, shopping carts, and essential tools to streamline your payment processing."
                 />
                 <div className="flex flex-wrap items-start justify-center gap-10 md:gap-4 px-4 mt-12">

@@ -15,7 +15,7 @@ export default function StartProcessing() {
                 <SectionTitle
                     icon={HandshakeIcon}
                     title="Partner With Crazy Merchants!"
-                    subtitle="Join thousands of businesses who trust Crazy Merchants for their high-risk payment processing needs. Get started today and experience the difference."
+                    subtitle="Join thousands of businesses who trust Merchant Services for their high-risk payment processing needs. Get started today and experience the difference."
                 />
 
                 <AnimatedContent className="mt-20 grid md:grid-cols-2 gap-5">

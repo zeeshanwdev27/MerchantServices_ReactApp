@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 
 export interface ILink {
     name: string;
-    href: string;
+    href?: string;
     subLinks?: ILink[];
 }
 
@@ -15,6 +15,14 @@ export interface ISectionTitle {
     icon: LucideIcon;
     title: string;
     subtitle: string;
+    dir?: 'left' | 'center';
+};
+
+export interface CBSectionTitle {
+    icon: LucideIcon;
+    title: string;
+    subtitle: string;
+    subtitle2: string;
     dir?: 'left' | 'center';
 };
 

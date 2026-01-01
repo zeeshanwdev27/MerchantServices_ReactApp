@@ -13,7 +13,7 @@ export default function FeaturesSection() {
                             dir="left"
                             icon={SparkleIcon}
                             title="High-Risk Merchant Account Provider"
-                            subtitle="Navigating high-risk industries is challenging, but Crazy Merchants makes it easier with our specialized high-risk merchant account services. Our expert team is dedicated to providing secure and efficient payment processing solutions tailored to your business needs."
+                            subtitle="Navigating high-risk industries is challenging, but Merchant Services makes it easier with our specialized high-risk merchant account services. Our expert team is dedicated to providing secure and efficient payment processing solutions tailored to your business needs."
                         />
                         <AnimatedContent className="p-4 md:p-6 bg-orange-500 w-full rounded-xl mt-12">
                             <p className="text-lg text-white">
