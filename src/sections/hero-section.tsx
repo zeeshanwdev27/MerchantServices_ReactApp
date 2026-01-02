@@ -1,5 +1,5 @@
 import AnimatedContent from "../components/animated-content";
-import { SparkleIcon, StarIcon } from "lucide-react";
+import { SparkleIcon } from "lucide-react";
 import CustomIcon from "../components/custom-icon";
 import { BadgeCheck, CreditCard, Clock, Shield   } from 'lucide-react';
 import MainForm from '../components/main_form'
@@ -9,7 +9,7 @@ export default function HeroSection() {
         <section className="bg-[url('/assets/hero-gradient-bg.png')] bg-cover bg-center bg-no-repeat px-4 md:px-16 lg:px-24 xl:px-32 min-h-screen flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
 
             <div className="w-full max-w-2xl mt-35 lg:mt-0 flex flex-col items-center justify-center ">
-                <AnimatedContent reverse distance={30} className="flex items-center gap-2 bg-white/50 backdrop-blur p-1 rounded-full">
+                {/* <AnimatedContent reverse distance={30} className="flex items-center gap-2 bg-white/50 backdrop-blur p-1 rounded-full">
                     <div className="flex items-center -space-x-3">
                         <img className="size-7 rounded-full border-2 border-white"
                             src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=50"
@@ -26,20 +26,20 @@ export default function HeroSection() {
                         <StarIcon className="size-4.5 fill-orange-500 stroke-orange-500" />
                         <span>4.9</span>
                     </div>
-                </AnimatedContent>
+                </AnimatedContent> */}
                 <AnimatedContent distance={30} delay={0.1} className="relative">
                     <h1 className="text-center font-urbanist text-5xl/15 md:text-6xl/18 mt-4 font-bold max-w-2xl">
-                        They Denied, We Approved
+                        Get Your Merchant Account Today!
                     </h1>
                     <div className="absolute -top-5 right-13 hidden md:block">
                         <CustomIcon icon={SparkleIcon} dir="right" />
                     </div>
                 </AnimatedContent>
-                <AnimatedContent distance={30} delay={0.2}>
+                {/* <AnimatedContent distance={30} delay={0.2}>
                     <p className="text-center text-base/7 text-zinc-500 max-w-lg mt-4">
                         Best Solution for Travel and Call Center Businesses
                     </p>
-                </AnimatedContent>
+                </AnimatedContent> */}
                 <AnimatedContent className="flex flex-col md:grid grid-cols-2 items-center gap-3 mt-6 w-full md:w-auto">
                     <div className="flex flex-col gap-1 relative py-3 md:py-2.5 w-full md:w-auto px-8 bg-white/50 text-gray-600 font-medium border border-white rounded-2xl">
                         <span className="text-md font-bold flex gap-1 items-center"><BadgeCheck className="text-orange-500 size-5"/>99% Approval Rate</span>
